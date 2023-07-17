@@ -1,0 +1,66 @@
+body{
+    margin:0;
+  }
+  #active {
+    color: orangered;
+    font-size: 20px;
+  }
+  .saw {
+      color:gray;
+  }
+  li {
+    margin: 10px 0px;
+    font-size: 17px;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+    font-style:oblique;
+  }
+  h1 {
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding: 20px;
+    margin:0px;
+  }
+  #grid ol{
+    border-right: 1px solid black;
+    margin-top: 0px;
+    margin-inline-end: 10px;
+    padding-inline-start: 30px;
+  }
+  #grid {
+    display:grid;
+    grid-template-columns: 150px 1fr;
+  } /* #grid 속성값의 순서를 가장 위에 배치했더니 ol속성 값이 적용안돼서, 원래 문단 크기에 따라 border-right 크기가 늘어나야 하는데 안 늘어남. 속성값 순서 배치가 진짜 중요하구나 */
+  h2 {
+    margin-top: 10px;
+  }
+  div {
+    padding-inline : 20px;
+  }
+  /*미디어쿼리=반응형 웹페이지 제작에 필수*/
+/*큰 화면에서는 가로로 넓게, 작은 화면에서는 세로로*/
+@media(max-width: 800px) {
+    h1 {
+        height: 30px;
+    }
+    #grid{
+      display: block;             
+    }
+    #grid ol {
+      border-right: none;
+      border-bottom: 1px solid black;
+      border-top: 1px solid black;
+      margin-bottom: 20px;
+    }
+    ol {
+        text-align:center}
+    li{
+        display: inline-block;
+        margin: 10px;
+    }
+    h1{
+      border-bottom: none;
+    }
+  }
